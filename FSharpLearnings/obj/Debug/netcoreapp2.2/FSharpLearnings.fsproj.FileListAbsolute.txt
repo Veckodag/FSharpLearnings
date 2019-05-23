@@ -1,0 +1,10 @@
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\bin\Debug\netcoreapp2.2\FSharpLearnings.deps.json
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\bin\Debug\netcoreapp2.2\FSharpLearnings.runtimeconfig.json
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\bin\Debug\netcoreapp2.2\FSharpLearnings.runtimeconfig.dev.json
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\bin\Debug\netcoreapp2.2\FSharpLearnings.dll
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\bin\Debug\netcoreapp2.2\FSharpLearnings.pdb
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\obj\Debug\netcoreapp2.2\FSharpLearnings.fsprojAssemblyReference.cache
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\obj\Debug\netcoreapp2.2\FSharpLearnings.AssemblyInfoInputs.cache
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\obj\Debug\netcoreapp2.2\FSharpLearnings.AssemblyInfo.fs
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\obj\Debug\netcoreapp2.2\FSharpLearnings.dll
+C:\Users\Fredr\source\repos\FSharpLearnings\FSharpLearnings\obj\Debug\netcoreapp2.2\FSharpLearnings.pdb
