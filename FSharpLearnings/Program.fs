@@ -207,23 +207,164 @@ open System
 
 //list_stuff()
 
-type emotion = 
-| joy = 0
-| fear = 1
-| anger = 2
+//type emotion = 
+//| joy = 0
+//| fear = 1
+//| anger = 2
 
-let enum_stuff() = 
-    let my_feeling = emotion.joy
+//let enum_stuff() = 
+//    let my_feeling = emotion.joy
 
-    let current_emotion = match my_feeling with
-    | emotion.joy ->"I'm joyful"
-    | emotion.fear -> "I'm fearful"
-    | emotion.anger -> "I'm angry"
-    | _ -> "I'm emotionless"
+//    let current_emotion = match my_feeling with
+    //| emotion.joy ->"I'm joyful"
+    //| emotion.fear -> "I'm fearful"
+    //| emotion.anger -> "I'm angry"
+    //| _ -> "I'm emotionless"
 
-    printfn "%s" current_emotion
+//    printfn "%s" current_emotion
 
-enum_stuff()
+//enum_stuff()
+
+//let option_stuff() = 
+//    let number_1 = 6
+//    let number_2 = 2
+//    let divide x y =
+//        match y with
+//        | 0 -> None
+//        | _ -> Some(x/y)
+
+//    if (divide number_1 number_2).IsSome then
+//        printfn "%i / %i = %A" number_1 number_2 ((divide number_1 number_2).Value)
+//    elif (divide number_1 number_2).IsNone then
+//        printfn "Can't divide by zero"
+//    else
+//        printfn "Something happened!"
+
+//option_stuff()
+
+//let tuple_stuff() = 
+//    let avg (w, x, y, z) : float =
+//        let sum = w + x + y + z
+//        sum / 4.0
+     
+//    printfn "Avg : %f" (avg (1.0, 2.0, 3.0, 4.0))
+
+//    let my_data = ("Fredrik", 29, 6.0)
+
+//    let (name, age, _) = my_data
+
+//    printfn "Name & age : %s & %i" name age     
+
+//tuple_stuff()
+
+//type Customer =
+//    { 
+//        Name : string
+//        Balance : float
+//    }
+
+//let record_stuff() =
+    
+//    let bob = { Name = "Bob Smith"; Balance = 101.508}
+//    printfn "%s owes us %.2f" bob.Name bob.Balance
+
+//record_stuff()
+
+//let seq_stuff() =
+
+//    let seq1 = seq { 1 .. 50 }
+//    let seq2 = seq { 0 .. 2 .. 50 }
+//    let seq3 = seq { 50 .. 1 }
+
+//    printfn "%A" seq2
+
+//    //Seq.toList seq2 |> List.iter (printfn "Num : %i")
+
+//    let is_prime n = 
+//        let rec check i = 
+//            i > n/2 || (n % i <> 0 && check (i + 1))
+//        check 2
+
+//    let prime_seq = seq { for n in 1 .. 500 do if is_prime n then yield n }
+
+//    printfn "%A" prime_seq
+//    Seq.toList prime_seq |> List.iter (printfn "Prime : %i")
+
+//seq_stuff()
+
+//let map_stuff() = 
+//    let customers = 
+//        Map.empty
+//            .Add("Bob Smith", 101.50)
+//            .Add("Sally Marks", 50.75)
+
+//    printfn "# of customers %i" customers.Count
+
+//    let cust = customers.TryFind "Bob Smith"
+
+//    match cust with
+//    | Some x -> printfn "Balance : %.2f" x
+//    | None -> printfn "Not Found"
+
+//    printfn "Customer : %A" customers
+
+//    if customers.ContainsKey "Bob Smith" then
+//        printfn "Bob Smith was found"
+
+//    printfn "Bobs balance : %.2f" customers.["Bob Smith"]
+
+//    let custs2 = Map.remove "Sally Marks" customers
+
+//    printfn "# of Customers %i" custs2.Count
+
+//map_stuff()
+
+//let add_stuff<'T> x y = 
+//    printfn "%A" (x + y)
+
+//let generic_stuff() = 
+//    //add_stuff<float> 5.5 2.4
+//    add_stuff<int> 17 4
+
+//generic_stuff()
+
+//let exp_stuff() =
+//    let divide x y = 
+//        try
+//            if y = 0 then raise(DivideByZeroException "Can't Divide by 0")
+//            else
+//                printfn "%i / %i = %i" x y (x / y)
+//        with
+//            | :? System.DivideByZeroException as ex
+//                -> printfn "Can't divide by zero"
+
+//    divide 5 0
+
+//exp_stuff()
+
+type Rectangle = struct
+    val Length : float
+    val Width : float
+
+    new (length, width) =
+        { 
+            Length = length; 
+            Width = width 
+        }
+end
+
+let struct_stuff() =
+    let area(shape: Rectangle) = 
+        shape.Length * shape.Width
+
+    let rect = new Rectangle(5.0, 6.0)
+
+    let rect_area = area rect
+
+    printfn "Area : %.2f" rect_area
+
+struct_stuff()
+
 
 Console.ReadKey () |> ignore
     
