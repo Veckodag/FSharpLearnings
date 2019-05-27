@@ -342,28 +342,58 @@ open System
 
 //exp_stuff()
 
-type Rectangle = struct
-    val Length : float
-    val Width : float
+//type Rectangle = struct
+//    val Length : float
+//    val Width : float
 
-    new (length, width) =
-        { 
-            Length = length; 
-            Width = width 
-        }
+//    new (length, width) =
+//        { 
+//            Length = length; 
+//            Width = width 
+//        }
+//end
+
+//let struct_stuff() =
+//    let area(shape: Rectangle) = 
+//        shape.Length * shape.Width
+
+//    let rect = new Rectangle(5.0, 6.0)
+
+//    let rect_area = area rect
+
+//    printfn "Area : %.2f" rect_area
+
+//struct_stuff()
+
+type Animal = class
+    val Name : string
+    val Height : float
+    val Weight : float
+
+    new (name, height, weight) =
+        { Name = name; Height = height; Weight = weight; }
+
+    member x.Run =
+        printfn "%s Runs" x.Name
+
 end
 
-let struct_stuff() =
-    let area(shape: Rectangle) = 
-        shape.Length * shape.Width
+type Dog(name, height, weight) =
+    inherit Animal(name, height, weight)
 
-    let rect = new Rectangle(5.0, 6.0)
+    member x.Bark = 
+        printfn "%s Barks" x.Name
 
-    let rect_area = area rect
+let class_stuff() =
 
-    printfn "Area : %.2f" rect_area
+    let dogge = new Animal("Spot", 20.5, 40.5)
+    dogge.Run
 
-struct_stuff()
+    let mini = new Dog("Mini", 13.5, 25.5)
+    mini.Run
+    mini.Bark
+
+class_stuff()
 
 
 Console.ReadKey () |> ignore
